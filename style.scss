@@ -1,0 +1,188 @@
+$White: hsl(0, 0%, 98%);
+$Gray: hsl(0, 0%, 41%);
+$Black: hsl(0, 0%, 8%);
+@mixin flex($juctify, $align, $gap) {
+  display: flex;
+  justify-content: $juctify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin text($size, $weight, $transform, $color) {
+  font-size: $size;
+  color: $color;
+  text-transform: $transform;
+  font-weight: $weight;
+}
+%box-shadow {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: 2px solid red;
+}
+
+body {
+  background-color: $White;
+  position: relative;
+  font-family: "Epilogue", sans-serif;
+  height: 100vh;
+  .body {
+    display: none;
+  }
+  header {
+    nav {
+      padding: 20px;
+      @include flex(space-between, center, 0);
+      .logo {
+        // border: 2px solid salmon;
+        width: 8%;
+        padding: 5px;
+        h1 {
+          color: $Black;
+        }
+      }
+      .container {
+        width: 92%;
+        @include flex(flex-start, center, 0);
+        .main-ul {
+          // border: 2px solid seagreen;
+          @include flex(flex-start, center, 20px);
+          list-style: none;
+          width: 85%;
+          li {
+            // border: 2px solid red;
+            padding: 5px;
+            a {
+              @include text(13px, 500, capitalize, $Gray);
+              text-decoration: none;
+              // border: 2px solid red;
+              display: block;
+              padding: 5px;
+              transition: all 0.3s;
+              &:hover {
+                color: $Black;
+              }
+            }
+          }
+          #features,
+          #company {
+            position: relative;
+            a {
+              @include flex(flex-start, center, 10px);
+            }
+            ul {
+              @include flex(space-between, flex-start, 0);
+              flex-direction: column;
+              list-style: none;
+              position: absolute;
+              transition: all 0.3s;
+              top: 30px;
+              transform: scale(0);
+              // border: 2px salmon solid;
+              @extend %box-shadow;
+              padding: 15px;
+              border-radius: 10px;
+              // z-index: 100;
+              background-color: $White;
+              li {
+                @include flex(flex-start, center, 10px);
+                img {
+                  width: 15px;
+                }
+              }
+            }
+          }
+          #features {
+            ul {
+              right: 0;
+              height: 180px;
+            }
+          }
+          #company {
+            ul {
+              left: 0;
+              width: 120px;
+              height: 140px;
+            }
+          }
+        }
+        .join {
+          // border: 2px solid slateblue;
+          width: 15%;
+          @include flex(space-between, center, 30px);
+          button {
+            @include text(13px, 700, capitalize, $Gray);
+            padding: 8px 15px;
+            background-color: transparent;
+            border: none;
+            // font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+              color: $Black;
+            }
+          }
+          .register {
+            border: 2px solid $Gray;
+            border-radius: 12px;
+          }
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+  }
+  main {
+    @include flex(space-between, center, 0);
+    padding: 0 140px;
+    padding-top: 40px;
+    .main-dis {
+      width: 40%;
+      margin-top: 90px;
+      h1 {
+        width: 87%;
+        @include text(60px, 700, normal, $Black);
+      }
+      p {
+        @include text(14px, 500, normal, $Gray);
+        width: 75%;
+        margin: 40px 0;
+        line-height: 1.3;
+      }
+      button {
+        @include text(13px, 700, normal, $White);
+        background-color: $Black;
+        border: 2px solid $Black;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: all 0.3s;
+        &:hover {
+          background-color: transparent;
+          color: $Black;
+          cursor: pointer;
+        }
+      }
+      ul {
+        @include flex(space-between, center, 0);
+        list-style: none;
+        margin-top: 80px;
+        li {
+          width: 15%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .img {
+      width: 40%;
+      height: 70vh;
+      background: url("/images/image-hero-desktop.png") center/contain no-repeat;
+    }
+  }
+}
+@import "mediaQuery";

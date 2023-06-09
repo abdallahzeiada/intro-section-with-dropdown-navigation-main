@@ -1,0 +1,320 @@
+body header nav .container .main-ul #features ul,
+body header nav .container .main-ul #company ul {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  position: relative;
+  font-family: "Epilogue", sans-serif;
+  height: 100vh;
+}
+body .body {
+  display: none;
+}
+body header nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+body header nav .logo {
+  width: 8%;
+  padding: 5px;
+}
+body header nav .logo h1 {
+  color: hsl(0, 0%, 8%);
+}
+body header nav .container {
+  width: 92%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+body header nav .container .main-ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  width: 85%;
+}
+body header nav .container .main-ul li {
+  padding: 5px;
+}
+body header nav .container .main-ul li a {
+  font-size: 13px;
+  color: hsl(0, 0%, 41%);
+  text-transform: capitalize;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  transition: all 0.3s;
+}
+body header nav .container .main-ul li a:hover {
+  color: hsl(0, 0%, 8%);
+}
+body header nav .container .main-ul #features,
+body header nav .container .main-ul #company {
+  position: relative;
+}
+body header nav .container .main-ul #features a,
+body header nav .container .main-ul #company a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+body header nav .container .main-ul #features ul,
+body header nav .container .main-ul #company ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  transition: all 0.3s;
+  top: 30px;
+  transform: scale(0);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 98%);
+}
+body header nav .container .main-ul #features ul li,
+body header nav .container .main-ul #company ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+body header nav .container .main-ul #features ul li img,
+body header nav .container .main-ul #company ul li img {
+  width: 15px;
+}
+body header nav .container .main-ul #features ul {
+  right: 0;
+  height: 180px;
+}
+body header nav .container .main-ul #company ul {
+  left: 0;
+  width: 120px;
+  height: 140px;
+}
+body header nav .container .join {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+body header nav .container .join button {
+  font-size: 13px;
+  color: hsl(0, 0%, 41%);
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 8px 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body header nav .container .join button:hover {
+  color: hsl(0, 0%, 8%);
+}
+body header nav .container .join .register {
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 12px;
+}
+body header nav .menu {
+  display: none;
+}
+body main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  padding: 0 140px;
+  padding-top: 40px;
+}
+body main .main-dis {
+  width: 40%;
+  margin-top: 90px;
+}
+body main .main-dis h1 {
+  width: 87%;
+  font-size: 60px;
+  color: hsl(0, 0%, 8%);
+  text-transform: normal;
+  font-weight: 700;
+}
+body main .main-dis p {
+  font-size: 14px;
+  color: hsl(0, 0%, 41%);
+  text-transform: normal;
+  font-weight: 500;
+  width: 75%;
+  margin: 40px 0;
+  line-height: 1.3;
+}
+body main .main-dis button {
+  font-size: 13px;
+  color: hsl(0, 0%, 98%);
+  text-transform: normal;
+  font-weight: 700;
+  background-color: hsl(0, 0%, 8%);
+  border: 2px solid hsl(0, 0%, 8%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+body main .main-dis button:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 8%);
+  cursor: pointer;
+}
+body main .main-dis ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin-top: 80px;
+}
+body main .main-dis ul li {
+  width: 15%;
+}
+body main .main-dis ul li img {
+  width: 100%;
+}
+body main .img {
+  width: 40%;
+  height: 70vh;
+  background: url("/images/image-hero-desktop.png") center/contain no-repeat;
+}
+
+@media (max-width: 400px) {
+  body .body {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+  }
+  body header nav .container {
+    position: absolute;
+    right: 0;
+    background-color: hsl(0, 0%, 98%);
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    padding-top: 100px;
+    width: 0;
+    transform: scale(0);
+    transition: width 0.5s;
+  }
+  body header nav .container .main-ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  body header nav .container .main-ul li a {
+    font-size: 15px;
+  }
+  body header nav .container .main-ul #features ul,
+  body header nav .container .main-ul #company ul {
+    position: relative;
+    box-shadow: none;
+    width: 100%;
+    transform: scale(0);
+    height: 0;
+    padding: 0;
+    top: 0;
+  }
+  body header nav .container .join {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  body header nav .container .join button {
+    width: 100%;
+    padding: 15px;
+  }
+  body header nav .menu {
+    display: block;
+    z-index: 10;
+  }
+  body main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  body main .main-dis {
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 0;
+  }
+  body main .main-dis h1 {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 38px;
+    color: hsl(0, 0%, 8%);
+    text-transform: normal;
+    font-weight: 700;
+  }
+  body main .main-dis p {
+    font-size: 17px;
+    color: hsl(0, 0%, 41%);
+    text-transform: normal;
+    font-weight: 700;
+    width: 100%;
+    line-height: 1.5;
+  }
+  body main .main-dis button {
+    font-size: 18px;
+    color: hsl(0, 0%, 98%);
+    text-transform: normal;
+    font-weight: 700;
+    padding: 20px 40px;
+    border-radius: 20px;
+  }
+  body main .main-dis ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 0 5px;
+    margin-top: 50px;
+  }
+  body main .main-dis ul li {
+    width: 20%;
+  }
+  body main .main-dis ul li img {
+    width: 100%;
+  }
+  body main .img {
+    width: 100%;
+    height: 40vh;
+    background: url("/images/image-hero-mobile.png") center/contain no-repeat;
+  }
+}/*# sourceMappingURL=style.css.map */
